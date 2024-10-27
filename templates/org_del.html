@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
@@ -31,3 +32,38 @@
     </div> <!-- end container-fluid -->
 </div> <!-- end content -->
 {% endblock %}
+=======
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Home</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Delete Organization</div>
+                        <div class="card-category">Page Subtitle</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <form action="" method="post" novalidate>
+                                <p>Are you sure you want to delete "{{ object }}"?</p>
+                                {% csrf_token %}
+                                {% include 'includes/form.html' %}
+                                <div class="form-group">
+                                    <div class="col-md-12 col-sm-3">
+                                        <button type="submit" class="btn btn-primary btn-rounded">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- end card -->
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div> <!-- end container-fluid -->
+</div> <!-- end content -->
+{% endblock %}
+>>>>>>> 2a0b7f0f103ee47a74d286c32c4864e08d087796
